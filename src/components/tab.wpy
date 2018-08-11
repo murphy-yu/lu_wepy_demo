@@ -1,0 +1,91 @@
+<style type="scss">
+    $fontcolor: #7b7b7b;
+    $activecolor: #13b113;
+    .tab {
+        color: $fontcolor;
+        position: fixed;
+        bottom: 0;
+        height: 100rpx;
+        width: 100%;
+        border-top: 1px solid #dad9d6;
+        background-color: #f7f7f7;
+        font-size: 24rpx;
+        white-space: nowrap;
+        .tab_item {
+            &.active {
+                color: $activecolor;
+            }
+            display: inline-block;
+            /* width: 25%; */
+            width: 33%;
+            text-align: center;
+        }
+        .icon {
+            width: 60rpx;
+            height: 60rpx;
+            display: block;
+            margin: auto;
+        }
+        .title {
+            padding-top: 6rpx;
+            display: block;
+        }
+    }
+</style>
+<template>
+    <view class="tab">
+        <!-- <view class="tab_item tab_message{{active == 0 ? ' active' : ''}}" @tap="change(0)">
+            <image class="icon" src="../images/lu_message{{active == 0 ? '_active' : ''}}.png"></image>
+            <text class="title">微服务</text>
+        </view>
+        <view class="tab_item tab_contact{{active == 1 ? ' active' : ''}}" @tap="change(1)">
+            <image class="icon" src="../images/lu_discover{{active == 1 ? '_active' : ''}}.png"></image>
+            <text class="title">LU账户</text>
+        </view>
+        <view class="tab_item tab_lu_discover{{active == 2 ? ' active' : ''}}" @tap="change(2)">
+            <image class="icon" src="../images/lu_service{{active == 2 ? '_active' : ''}}.png"></image>
+            <text class="title">LU服务</text>
+        </view>
+
+        <view class="tab_item tab_me{{active == 3 ? ' active' : ''}}" @tap="change(3)">
+            <image class="icon" src="../images/lu_reward{{active == 3 ? '_active' : ''}}.png"></image>
+            <text class="title">LU福利</text>
+        </view> -->
+
+        <view class="tab_item tab_message{{active == 0 ? ' active' : ''}}" @tap="change(0)">
+            <image class="icon" src="../images/lu_message{{active == 0 ? '_active' : ''}}.png"></image>
+            <text class="title">微资讯</text>
+        </view>
+        <view class="tab_item tab_contact{{active == 1 ? ' active' : ''}}" @tap="change(1)">
+            <image class="icon" src="../images/lu_service{{active == 1 ? '_active' : ''}}.png"></image>
+            <text class="title">收款日历</text>
+        </view>
+        <view class="tab_item tab_lu_discover{{active == 2 ? ' active' : ''}}" @tap="change(2)">
+            <image class="icon" src="../images/lu_account{{active == 2 ? '_active' : ''}}.png"></image>
+            <text class="title">LU服务</text>
+        </view>
+    </view>
+</template>
+<script>
+    import wepy from 'wepy';
+
+    export default class Tab extends wepy.component {
+
+        props = {
+            active: {
+                twoWay: true
+            }
+        };
+        data = {
+        };
+
+        methods = {
+            change (idx, evt) {
+                this.active = +idx;
+            }
+        };
+
+        onLoad () {
+        }
+    }
+</script>
