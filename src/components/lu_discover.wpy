@@ -7,32 +7,14 @@
     }
 </style>
 <template>
-    <view class="lu_discover">
 
-        <!--
-        <moment :list="dMoment" />
-        <action :list="dShopping" />
-        <drift :list="dDrift" />
-        <shopping :list="dAction" />
-        -->
-
-
-            <repeat for="{{list}}" key="index" index="index" item="item">
-                <group :list="item"></group>
-            </repeat>
-            <!--block wx:for="{{list}}" wx:key="index" wx:for-index="index" wx:for-item="item">
-                <view class="item" @tap="click({{index}}, {{item}})">
-                    <image class="icon" src="{{item.icon}}"></image>
-                    <text class="title">{{item.title}}</text>
-                    <image class="arrow_left" src="../images/arrow_left.png"></image>
-                </view>
-            </block-->
-    </view>
+    <calendar></calendar>
 </template>
 <script>
     import wepy from 'wepy';
 
     import Group from './group';
+    import Calendar from '../components/calendar'
 
     export default class Message extends wepy.component {
 
@@ -41,7 +23,8 @@
             action: List,
             drift: List,
             shopping: List, */
-            group: Group
+            group: Group,
+            calendar: Calendar,
         };
         data = {
             // dMoment: [{icon: wepy.env === 'web' ? './images/moment.png' : '../images/moment.png', title: '朋友圈1'}],
