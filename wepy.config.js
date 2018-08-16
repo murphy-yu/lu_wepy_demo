@@ -13,7 +13,8 @@ module.exports = {
   },
   compilers: {
     sass: {
-      outputStyle: "compressed"
+      outputStyle: "compressed",
+      indentSyntax: true
     },
     babel: {
       sourceMap: true,
@@ -59,4 +60,3 @@ if (prod) {
     }*/
   }
 }
-
