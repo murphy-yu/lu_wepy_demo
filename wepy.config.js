@@ -2,7 +2,7 @@ const path = require('path');
 let prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  eslint: true,
+  eslint: false,
   wpyExt: ".wpy",
   build: {
     web: {
