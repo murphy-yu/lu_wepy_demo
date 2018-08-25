@@ -69,6 +69,7 @@
         methods = {
             select (id, evt) {
                 this.$root.$navigate({url: 'chat?id=' + id});
+                // this.$root.$navigate({url: 'LFXCalendar?id=' + id});//LFXCalendar.wpy
             }
         };
 
