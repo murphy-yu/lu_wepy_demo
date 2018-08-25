@@ -30,7 +30,7 @@ page, .body{
             <lu_discover />
         </view>
         <view class="tab_item tab_me" hidden="{{currentTab != 2}}">
-            <me />
+            <lu_me />
         </view>
 
         <tab :active.sync="currentTab" />
@@ -41,11 +41,11 @@ page, .body{
 <script>
     import wepy from 'wepy';
     import Message from '../components/message';
+    import Contact from '../components/contact';
     // import Discovery from '../components/discovery';
     import Lu_discover from '../components/lu_discover'
     import Lu_message from '../components/lu_message'
-    import Contact from '../components/contact';
-    import Me from '../components/me';
+    import Lu_me from '../components/lu_me';
     import Tab from '../components/tab';
 
     import Toast from 'wepy-com-toast';
@@ -59,10 +59,11 @@ page, .body{
 
         components = {
             message: Message,
+
             lu_message: Lu_message,
             lu_discover: Lu_discover,
-
-            me: Me,
+            lu_me: Lu_me,
+            
             contact: Contact,
             tab: Tab,
             toast: Toast
