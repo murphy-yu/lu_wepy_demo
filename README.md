@@ -11,7 +11,7 @@ npm install wepy-cli -g
 
 ### 2. 下载源代码
 ```bash
-git clone 
+git clone https://github.com/murphy-yu/lu_wepy_demo.git
 ```
 
 ### 3. 安装开发依赖
